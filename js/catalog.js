@@ -15,7 +15,7 @@ window.TT_PRODUCTS = [
     desc:"Crimped gujiya candles finished with silver varq — a little Holi and Diwali nostalgia in every box.",
     inside:"Set of 4 gujiya candles in a floral window box.", perfect:"Festive hampers, return gifts, Holi and Diwali.", note:"Decorative only — not edible." },
   { id:"banarasi-paan", name:"Banarasi Paan", sub:"The Mithai Collection", col:"mithai", tier:"", box:"Box of 4", price:209, img:"img/banarasi-paan.jpg",
-    desc:"Khaike nahi, jalaike Paan Banaraswala! Folded paan candles with silver varq — our cheekiest gift yet.",
+    desc:"Khaike nahi, jalaike Paan Banaraswala! Folded paan candles with silver varq — our most playful gift yet.",
     inside:"Pack of 4 paan candles in a green window box.", perfect:"After-dinner gifting, house-warmings, fun surprises.", note:"Decorative only — not edible." },
 
   { id:"rangoli-blooms", name:"Rangoli Blooms", sub:"Floating Candles", col:"floating", tier:"Essential", box:"Box of 4", price:109, img:"img/rangoli-blooms.jpg",

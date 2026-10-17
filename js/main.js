@@ -164,7 +164,7 @@
     if (!drawer) return;
     var body = $(".dr-body", drawer), foot = $(".dr-foot", drawer), ls = lines();
     if (!ls.length) {
-      body.innerHTML = '<div class="dr-empty">' + I.gift.replace("<svg", '<svg width="44" height="44" style="color:var(--gold-500)"') + "<h3>Nothing here yet</h3><p>Choose a few candles and they will wait here, gift-ready.</p></div>";
+      body.innerHTML = '<div class="dr-empty">' + I.gift.replace("<svg", '<svg width="44" height="44" style="color:var(--gold-500)"') + "<h3>Your gift box is empty</h3><p>Choose a few favourites and they will wait here for you.</p></div>";
       foot.innerHTML = '<a class="btn" href="shop.html"><span>Browse the shop</span><span class="ic">' + I.arrow + "</span></a>";
       return;
     }
@@ -175,7 +175,7 @@
     foot.innerHTML = '<div class="tot"><span class="tracked">Subtotal</span><b>' + TT.money(total()) + "</b></div>" +
       '<div class="cerr" hidden></div>' +
       '<button class="btn gold" data-checkout><span>' + (live ? "Checkout securely" : "Send order on Instagram") + '</span><span class="ic">' + I.arrow + "</span></button>" +
-      '<p class="dr-note">' + (live ? "Shipping and payment are confirmed at checkout." : "We confirm your order and delivery details by DM.") + "</p>";
+      '<p class="dr-note">' + (live ? "Shipping and payment are confirmed at checkout." : "We will confirm your order and delivery details by message.") + "</p>";
   }
   function setCart(open) {
     if (!drawer) buildDrawer();
@@ -212,7 +212,7 @@
       body: JSON.stringify({ items: ls.map(function (l) { return { variant_id: l.p.variantId, quantity: l.q }; }), success_url: origin + "success.html", cancel_url: origin + "cancel.html", locale: "en" })
     }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (d) { if (!d.url) throw new Error("no url"); location.href = d.url; })
-      .catch(function () { btn.disabled = false; btn.style.opacity = ""; showCartErr("Checkout could not start. Please try again, or order by Instagram DM."); });
+      .catch(function () { btn.disabled = false; btn.style.opacity = ""; showCartErr("Checkout could not start. Please try again, or send us your order on Instagram."); });
   }
   TT.clearCart = function () { cart = {}; save(); renderCart(); };
 

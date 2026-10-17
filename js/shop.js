@@ -34,7 +34,7 @@
     var list = visible(TT.store.products);
     $$pressed();
     if (!list.length) {
-      grid.innerHTML = '<div class="state"><span class="eyebrow">' + TT.icons.spark + 'Nothing here</span><h3>No gifts match that filter</h3><p>Try another tier, or browse the whole collection.</p><button class="btn" data-reset><span>Clear filters</span><span class="ic">' + TT.icons.arrow + "</span></button></div>";
+      grid.innerHTML = '<div class="state"><span class="eyebrow">' + TT.icons.spark + 'Nothing here yet</span><h3>No gifts match those filters</h3><p>Try a different tier, or browse the whole collection.</p><button class="btn" data-reset><span>Clear filters</span><span class="ic">' + TT.icons.arrow + "</span></button></div>";
       return;
     }
     grid.innerHTML = list.map(TT.card).join("");
@@ -56,7 +56,7 @@
 
   TT.ready.then(function (S) {
     if (S.error) {
-      banner.innerHTML = '<div class="banner err" role="alert">Live availability could not be loaded, so you are seeing our catalogue prices. You can still send your order by Instagram.</div>';
+      banner.innerHTML = '<div class="banner err" role="alert">We could not load live availability, so you are seeing our catalogue prices. You can still send us your order on Instagram.</div>';
     }
     buildControls(S.products);
     render();
